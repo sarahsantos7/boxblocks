@@ -1,0 +1,27 @@
+ : transparent
+A:
+B: blue
+C: cyan
+D:
+E: emerald
+F:
+G: green
+H:
+I:
+J:
+K: black
+L:
+M: magenta
+N:
+O: orange
+P: purple
+Q:
+R: red
+S:
+T:
+U:
+V:
+W: white
+X:
+Y: yellow
+Z:
