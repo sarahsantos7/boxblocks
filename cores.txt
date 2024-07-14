@@ -12,7 +12,7 @@ J:
 K: black
 L:
 M: magenta
-N:
+N: brown
 O: orange
 P: purple
 Q:
