@@ -1,5 +1,5 @@
 var TAMANHO_BLOCO = 5;
-var TAMANHO_PIXEL = 7;
+var TAMANHO_PIXEL = 5;
 var CONTEXT = null;
 var BLOCOS = [];
 
@@ -9,6 +9,7 @@ function carregaBlocos() {
     carregaBloco("C");
     carregaBloco("G");
     carregaBloco("T");
+    carregaBloco("P");
 }
 
 function carregaBloco(nome) {
@@ -63,6 +64,10 @@ function desenhaBloco(bloco, x, y) {
             desenhaPixel("#7CFC00", pixelX, pixelY);
         } else if (pixel == 'N') {
             desenhaPixel("#8B5A2B", pixelX, pixelY);
+        } else if (pixel == 'P') {
+            desenhaPixel("#504F54", pixelX, pixelY);
+        } else if (pixel == 'p') {
+            desenhaPixel("#777", pixelX, pixelY);
         }
 
         if (pixel == '\n') {
@@ -81,7 +86,7 @@ function desenhaPixel(cor, x, y) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     CONTEXT = achaContext();
-    setTimeout(carregaCenario('tela1'), 200);
+    setTimeout(carregaCenario('sarah'), 200);
 });
 
 

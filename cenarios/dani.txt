@@ -1,3 +1,10 @@
+                   G
+                  GGG
+                 GGGGG
+CCCCGG          GGGTGGG
+CCCCCG         GGGGTGGGG
+CCCCCGGGGGGG       T
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
-CCCCC
+
