@@ -1,39 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  GGGG         GG
-                  NNNN        GGGG
-                  NNNN      GGGGGGGG
-                           GGGGGGGGGGG
-                               NN
-      GGGG  GGGG  GGGG  GGGG  GGGG
-      NNNN  NNNN  NNNN  NNNN  NNNN
-      NNNN  NNNN  NNNN  NNNN  NNNN
-
+   TT
+   T T
+   T  T    TTTTT    T   T
+   T T     T   T     T T
+   TT      T   T      T
+   TTT     T   T     T T
+   T  T    T   T    T   T
+   T   T   TTTTT   T     T
+   TTTT
