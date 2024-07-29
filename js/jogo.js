@@ -1,7 +1,19 @@
+var CENARIO_INICIAL = 'sarah';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
 var BLOCOS = [];
+var NOME_BLOCOS = [
+    'C', // chao
+    'G', // grama
+    'T', // terra
+    'P', // pedra
+    'O', // ouro
+    'M', // madeira
+    'F', // folha
+    'R', // ruby
+];
+
 var CORES = {
     'G': '#7CFC00',
     'g': '#00C02A',
@@ -14,35 +26,45 @@ var CORES = {
     'F': '#234200',
     'f': '#3F7500',
     'R': '#660300',
-
 };
 
-carregaBlocos();
+function log(texto){
+    console.log(texto);
+}
 
 function carregaBlocos() {
-    carregaBloco("C");
-    carregaBloco("G");
-    carregaBloco("T");
-    carregaBloco("P");
-    carregaBloco("O");
-    carregaBloco("M");
-    carregaBloco("m");
-    carregaBloco("F");
-    carregaBloco("f");
-    carregaBloco("R");
+    var promises = []
+
+    NOME_BLOCOS.forEach(bloco => {
+        promises.push(carregaBloco(bloco));
+    });
+
+    Promise.all(promises).then(promise => {
+        log("Todas as promises foram resolvidas");
+        comecaJogo();
+    });
 }
 
 function carregaBloco(nome) {
-    fetch('blocos/' + nome +'.txt').then(response => {
-        return response.text();
-    }).then(bloco => {
-      BLOCOS[nome] = bloco;
+    var promise = fetch('blocos/' + nome +'.txt');
+
+    promise.then(response => response.text()).then(bloco => {
+        log('Bloco ' + nome + ' carregado.');
+        BLOCOS[nome] = bloco;
     })
+
+    return promise;
 }
 
-
 function achaContext() {
+    log('Encontrando context...');
     return document.getElementById('canvas').getContext('2d');
+}
+
+function comecaJogo() {
+    log('Começando jogo...');
+    CONTEXT = achaContext();
+    carregaCenario(CENARIO_INICIAL);
 }
 
 function carregaCenario(cenario) {
@@ -99,8 +121,7 @@ function desenhaPixel(cor, x, y) {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    CONTEXT = achaContext();
-    setTimeout(carregaCenario('sarah'), 200);
+    carregaBlocos();
 });
 
 
