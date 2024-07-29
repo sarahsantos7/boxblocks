@@ -1,7 +1,21 @@
 var TAMANHO_BLOCO = 5;
-var TAMANHO_PIXEL = 5;
+var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
 var BLOCOS = [];
+var CORES = {
+    'G': '#7CFC00',
+    'g': '#00C02A',
+    'N': '#8B5A2B',
+    'P': '#504F54',
+    'p': '#777777',
+    'O': '#FFDA00',
+    'M': '#462912',
+    'm': '#825326',
+    'F': '#234200',
+    'f': '#3F7500',
+    'R': '#660300',
+
+};
 
 carregaBlocos();
 
@@ -10,6 +24,12 @@ function carregaBlocos() {
     carregaBloco("G");
     carregaBloco("T");
     carregaBloco("P");
+    carregaBloco("O");
+    carregaBloco("M");
+    carregaBloco("m");
+    carregaBloco("F");
+    carregaBloco("f");
+    carregaBloco("R");
 }
 
 function carregaBloco(nome) {
@@ -37,7 +57,6 @@ function carregaCenario(cenario) {
             var bloco = cenario[x];
 
             if (bloco != '\n' && bloco != ' ') {
-                //console.log(BLOCOS)
                 desenhaBloco(BLOCOS[bloco], c, l);
             }
 
@@ -60,15 +79,10 @@ function desenhaBloco(bloco, x, y) {
         var pixelX = (x * TAMANHO_BLOCO * TAMANHO_PIXEL) + (c * TAMANHO_PIXEL);
         var pixelY = (y * TAMANHO_BLOCO * TAMANHO_PIXEL) + (l * TAMANHO_PIXEL);
 
-        if (pixel == 'G') {
-            desenhaPixel("#7CFC00", pixelX, pixelY);
-        } else if (pixel == 'N') {
-            desenhaPixel("#8B5A2B", pixelX, pixelY);
-        } else if (pixel == 'P') {
-            desenhaPixel("#504F54", pixelX, pixelY);
-        } else if (pixel == 'p') {
-            desenhaPixel("#777", pixelX, pixelY);
-        }
+         var cor = CORES[pixel];
+         if (cor) {
+            desenhaPixel(cor, pixelX, pixelY);
+         }
 
         if (pixel == '\n') {
             l++;
