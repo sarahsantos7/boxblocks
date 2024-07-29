@@ -1,9 +1,14 @@
-   TT
-   T T
-   T  T    TTTTT    T   T
-   T T     T   T     T T
-   TT      T   T      T
-   TTT     T   T     T T
-   T  T    T   T    T   T
-   T   T   TTTTT   T     T
-   TTTT
+
+
+
+
+
+            CCC    CCC   C   C
+            M  M  M   M   M M
+C           RRRR  R   R    R
+CC          O  O  O   O   O O                 CCCC
+CCCC        PPP    PPP   P   P              CCCCCC
+CCCCCC                                CCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+RPPPPPPPPPPPPPPPPPPOPPPPPPPPPPPPPPPPPPPOPPPPPPPPPP
+PPPPPPOPPPPPPPPPPPPPPPPPPPPPPPPPPOPPPPPPPPPPPPRPPP
