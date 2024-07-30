@@ -16,6 +16,7 @@ var NOME_BLOCOS = [
     't_so_terra',
     'T_terra',
     'V_lava',
+    'D_diamante',
 ];
 
 
@@ -30,7 +31,7 @@ var CORES = {
     'm': '#825326',
     'F': '#234200',
     'f': '#3F7500',
-    'R': '#660300',
+    'R': '#A00000',
     'L': '#25D400',
     'l': '#1CA300',
     't': '#8B5A2B',
@@ -38,7 +39,8 @@ var CORES = {
     'a': '#2E00B7',
     'V': '#FF1300',
     'v': '#FF6A00',
-};
+    'D': '#07D0FF',
+   };
 
 function log(texto){
     console.log(texto);
