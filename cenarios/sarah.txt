@@ -1,12 +1,12 @@
-
-                                      F
-                                     FFF
-                                    FFFFF
+                                      n
+                                     nFn
+                                    nFFFn
+                                   nFFFFFn
                                    FFFFFFF
   L  L                                M
-NNNNNNNNL                             M
-NNNNNNNNN                   L   LL   LM        L
-tttttttttNNNNNNNNNAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNN
+CCCCCCCCL                             M
+CCCCCCCCC                   L   LL   LM        L
+tttttttttCNNNNNNNNAAAAAAAAANNNNNNNNNNNNNNNNNNNNNNNN
 tttttttttttttttttttAAAAAAAttttttttttttttttttttttttt
 PPPPPPPPPPPPPPOPPPPPAAAAAPPPPPPPPPORPPPPPPPPPRPPPPP
 DOOPPPPPPPPOPPPPPPPPPOPRPPPPPPPPPPPPOPPPDOPPPPPPPVV

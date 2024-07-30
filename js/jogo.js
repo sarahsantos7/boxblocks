@@ -19,6 +19,7 @@ var NOME_BLOCOS = [
     'D_diamante',
     'I_vidro',
     'N_chao',
+    'n_neve',
 ];
 
 
@@ -43,7 +44,6 @@ var CORES = {
     'v': '#FF6A00',
     'D': '#07D0FF',
     'I': '#FFFFFF',
-    'n': '#CDCCC5',
        };
 
 function log(texto){
