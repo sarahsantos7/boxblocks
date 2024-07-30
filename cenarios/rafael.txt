@@ -1,9 +1,15 @@
 
 
 
-                            C
-      CCCCCC                C
-     CTTTTTCCC             CC
-    CTTTTTTTTTCCCC      CCCCC
-CCCCTTTTTTTTTTCCCCCCCCCCCCCCC
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
+
+
+                                                AAA
+                                              AAACAC
+                                            AAACCCCC
+                                       AAAAAACCCCCCC
+ L        L LLL         LLL      L     ACCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCACCCCCCCCCCCC
+tttttttttttttttttttttttttttttttttttttttAtttttttttttt
+PPPPPPPPPPPPPPOPttttttttttttPPPPPPPORPPAPPPPPPRPPPPP
+POOPPPPPPPPOPPPPPPPPtttttPPPPPPPPPPPPOPAPPOPPPPPPPPP

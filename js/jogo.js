@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'sarah';
+var CENARIO_INICIAL = 'rafael';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
