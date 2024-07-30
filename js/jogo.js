@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'tela1';
+var CENARIO_INICIAL = 'sarah';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
@@ -12,6 +12,7 @@ var NOME_BLOCOS = [
     'M', // madeira
     'F', // folha
     'R', // ruby
+    'L', // planta
 ];
 
 var CORES = {
@@ -20,12 +21,14 @@ var CORES = {
     'N': '#8B5A2B',
     'P': '#504F54',
     'p': '#777777',
-    'O': '#FFDA00',
+    'O': '#FFCA00',
     'M': '#462912',
     'm': '#825326',
     'F': '#234200',
     'f': '#3F7500',
     'R': '#660300',
+    'L': '#25D400',
+    'l': '#1CA300',
 };
 
 function log(texto){
