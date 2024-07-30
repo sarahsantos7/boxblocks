@@ -23,8 +23,10 @@ var NOME_BLOCOS = [
 
 ];
 
+var NOME_LETRAS = ['a', 'b', 'c'];
 
 var CORES = {
+    '█': '#000000',
     'G': '#7CFC00',
     'g': '#00C02A',
     'N': '#8B5A2B',
@@ -45,7 +47,7 @@ var CORES = {
     'v': '#FF6A00',
     'D': '#07D0FF',
     'I': '#FFFFFF',
-       };
+};
 
 function log(texto){
     console.log(texto);
@@ -58,6 +60,10 @@ function carregaBlocos() {
         promises.push(carregaBloco(bloco));
     });
 
+    NOME_LETRAS.forEach(bloco => {
+        promises.push(carregaBloco('letras/' + bloco));
+    });
+
     Promise.all(promises).then(promise => {
         log("Todas as promises foram resolvidas");
         comecaJogo();
@@ -68,8 +74,13 @@ function carregaBloco(nome) {
     var promise = fetch('blocos/' + nome +'.txt');
 
     promise.then(response => response.text()).then(bloco => {
-        var codigo = nome.split("_")[0];
-        log('Bloco ' + nome + ' carregado. Codigo ' + codigo);
+        var codigo
+         if (nome.indexOf("_") > 0) {
+            codigo = nome.split("_")[0];
+         } else {
+            codigo = nome.replace("letras/", "");
+         }
+        log('Bloco ' + codigo + ' carregado.');
         BLOCOS[codigo] = bloco;
     })
 
