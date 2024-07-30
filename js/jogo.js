@@ -1,10 +1,10 @@
-var CENARIO_INICIAL = 'tela1';
+var CENARIO_INICIAL = 'sarah';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
 var BLOCOS = [];
 var NOME_BLOCOS = [
-    'C', // chao
+    'C', // chão
     'G', // grama
     'T', // terra
     'P', // pedra
@@ -14,7 +14,9 @@ var NOME_BLOCOS = [
     'R', // ruby
     'L', // planta
     't', // só terra
-];
+    'A', // água
+    'a', // água clára
+    ];
 
 var CORES = {
     'G': '#7CFC00',
@@ -31,6 +33,8 @@ var CORES = {
     'L': '#25D400',
     'l': '#1CA300',
     't': '#8B5A2B',
+    'A': '#250092',
+    'a': '#2E00B7',
 };
 
 function log(texto){
