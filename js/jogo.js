@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'sarah';
+var CENARIO_INICIAL = 'dani';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
