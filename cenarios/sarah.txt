@@ -4,8 +4,8 @@ CCCC                                 FFF
 CCCCC                               FFFFF
 CCCCCCL                            FFFFFFF
 CCCCCCCL                              M
-CCCCCCCC                              M
-CCCCCCCCC    L              L        LM        L
+CCCCCCCCL                             M
+CCCCCCCCC    L              L   LL   LM        L
 CCCCCCCCCCCCCCCCCCAAAAAAAAACCCCCCCCCCCCCCCCCCCCCCCC
 tttttttttttttttttttAAAAAAAttttttttttttttttttttttttt
 PPPPPPPPPPPPPPOPPPPPAAAAAPPPPPPPPPORPPPPPPPPPRPPPPP
