@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'sarah';
+var CENARIO_INICIAL = 'tela1';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
@@ -13,6 +13,7 @@ var NOME_BLOCOS = [
     'F', // folha
     'R', // ruby
     'L', // planta
+    't', // só terra
 ];
 
 var CORES = {
@@ -29,6 +30,7 @@ var CORES = {
     'R': '#660300',
     'L': '#25D400',
     'l': '#1CA300',
+    't': '#8B5A2B',
 };
 
 function log(texto){

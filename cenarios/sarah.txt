@@ -1,13 +1,13 @@
 CC
-CCC                                   F
+CCCL                                  F
 CCCC                                 FFF
 CCCCC                               FFFFF
-CCCCCC                             FFFFFFF
-CCCCCCC                               M
+CCCCCCL                            FFFFFFF
+CCCCCCCL                              M
 CCCCCCCC                              M
-CCCCCCCCC    L                        M
+CCCCCCCCC    L              L        LM        L
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+ttttttttttttttttttttttttttttttttttttttttttttttttttt
 PPPPPPPPPPPPPPOPPPPPPPPPPPPPPPPPPPORPPPPPPPPPRPPPPP
 POOPPPPPPPPOPPPPPPPPPOPRPPPPPPPPPPPPOPPPPOPPPPPPPPP
 PPRPPPRPPPPPPPPPPPPPPPPPPPPPPPRPPPOOPPPPPPPPPPPPPPP
