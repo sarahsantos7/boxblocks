@@ -1,4 +1,6 @@
 #canvas {
-    border:10px solid #0000FF;
+    border:10px solid #000000;
 }
-
+body {
+    background-color: #ccc;
+}
