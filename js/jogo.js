@@ -20,7 +20,8 @@ var NOME_BLOCOS = [
     'I_vidro',
     'N_chao',
     'E_neve',
-
+    'E_neve',
+    'K_gelo',
 ];
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -47,6 +48,9 @@ var CORES = {
     'v': '#FF6A00',
     'D': '#07D0FF',
     'I': '#FFFFFF',
+    'K': '#56B2FF',
+    'K': '#56B2FF',
+    'k': '#B9DFFF',
 };
 
 function log(texto){
