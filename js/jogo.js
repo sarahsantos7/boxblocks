@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'rafael';
+var CENARIO_INICIAL = 'sarah';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
@@ -15,6 +15,7 @@ var NOME_BLOCOS = [
     'R_rubi',
     't_so_terra',
     'T_terra',
+    'V_lava',
 ];
 
 
@@ -35,6 +36,8 @@ var CORES = {
     't': '#8B5A2B',
     'A': '#250092',
     'a': '#2E00B7',
+    'V': '#FF1300',
+    'v': '#FF6A00',
 };
 
 function log(texto){
