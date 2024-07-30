@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'dani';
+var CENARIO_INICIAL = 'sarah';
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
@@ -17,6 +17,7 @@ var NOME_BLOCOS = [
     'T_terra',
     'V_lava',
     'D_diamante',
+    'I_vidro',
 ];
 
 
@@ -40,6 +41,7 @@ var CORES = {
     'V': '#FF1300',
     'v': '#FF6A00',
     'D': '#07D0FF',
+    'I': '#FFFFFF',
    };
 
 function log(texto){
