@@ -4,19 +4,19 @@ var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
 var BLOCOS = [];
 var NOME_BLOCOS = [
-    'C', // chão
-    'G', // grama
-    'T', // terra
-    'P', // pedra
-    'O', // ouro
-    'M', // madeira
-    'F', // folha
-    'R', // ruby
-    'L', // planta
-    't', // só terra
-    'A', // água
-    'a', // água clára
-    ];
+    'A_agua',
+    'C_chao',
+    'F_folha',
+    'G_grama',
+    'L_planta',
+    'M_madeira',
+    'O_ouro',
+    'P_pedra',
+    'R_rubi',
+    't_so_terra',
+    'T_terra',
+];
+
 
 var CORES = {
     'G': '#7CFC00',
@@ -58,8 +58,9 @@ function carregaBloco(nome) {
     var promise = fetch('blocos/' + nome +'.txt');
 
     promise.then(response => response.text()).then(bloco => {
-        log('Bloco ' + nome + ' carregado.');
-        BLOCOS[nome] = bloco;
+        var codigo = nome.split("_")[0];
+        log('Bloco ' + nome + ' carregado. Codigo ' + codigo);
+        BLOCOS[codigo] = bloco;
     })
 
     return promise;
