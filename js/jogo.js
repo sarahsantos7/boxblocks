@@ -13,17 +13,17 @@ var NOME_BLOCOS = [
     'O_ouro',
     'P_pedra',
     'R_rubi',
-    't_so_terra',
+    'X_so_terra',
     'T_terra',
     'V_lava',
     'D_diamante',
     'I_vidro',
     'N_chao',
-    'n_neve',
+    'E_neve',
 
 ];
 
-var NOME_LETRAS = ['a', 'b', 'c'];
+var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var CORES = {
     '█': '#000000',
