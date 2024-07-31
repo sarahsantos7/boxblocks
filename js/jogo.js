@@ -29,6 +29,7 @@ var NOME_CONSTRUCOES = [
 var NOME_JOGADORES = [
     {'^': 'luffy_a'},
     {'#': 'luffy_b'},
+    {'*': 'tony'},
 ]
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -58,6 +59,7 @@ var CORES = {
     'K': '#56B2FF',
     'k': '#B9DFFF',
     'b': '#F60600',
+    'B': '#FFEAA9',
 };
 
 function log(texto){
@@ -119,23 +121,31 @@ function carregaCenario(cenario) {
         return response.text();
       }).then(cenario => {
 
-        var l = 0;
-        var c = 0;
-        for (let x = 0; x < cenario.length; x++) {
-            var bloco = cenario[x];
+        var linhas = cenario.split("\n")
+        log("Carregando cenario com " + linhas.length + " linhas")
+        var l = 0
+        linhas.forEach(linha => {
+            log("Carregando linha " + l)
+            carregaLinha(linha, l)
+            l++
+        });
 
-            if (bloco != '\n' && bloco != ' ') {
-                desenhaBloco(BLOCOS[bloco], c, l);
-            }
+      })
+}
 
-            if (bloco == '\n') {
-                l++;
-                c=0;
+function carregaLinha(linha, l) {
+    for (var c = 0; c < linha.length; c++) {
+        var bloco = linha[c]
+        if (bloco != ' ') {
+            var blocoAchado = BLOCOS[bloco];
+            if (blocoAchado) {
+                log("linha " + l)
+                desenhaBloco(blocoAchado, c, l);
             } else {
-                c++;
+                log("Não consegui encontrar o bloco " + bloco + ". Linha: " + linha + ". Coluna: " + c);
             }
         }
-      })
+    }
 }
 
 function desenhaBloco(bloco, x, y) {
