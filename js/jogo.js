@@ -60,6 +60,7 @@ var CORES = {
     'k': '#B9DFFF',
     'b': '#F60600',
     'B': '#FFEAA9',
+    'r': '#FF92A9',
 };
 
 function log(texto){
