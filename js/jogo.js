@@ -1,7 +1,9 @@
-var CENARIO_INICIAL = 'sarah';
+var CENARIO_INICIAL = 'tela1';
+var INTERVALO_PROTETOR = 1200;
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
+var PROTETOR_DE_TELA = null;
 var BLOCOS = [];
 var NOME_BLOCOS = [
     'A_agua',
@@ -153,6 +155,27 @@ function desenhaBloco(bloco, x, y) {
 function desenhaPixel(cor, x, y) {
     CONTEXT.fillStyle = cor;
     CONTEXT.fillRect(x, y, TAMANHO_PIXEL, TAMANHO_PIXEL);
+}
+
+function sorteiaCenario() {
+    var n = Math.random();
+    if (n > 0.75) {
+        carregaCenario('tela1');
+    } else if (n > 0.50) {
+        carregaCenario('sarah');
+    } else if (n > 0.25) {
+        carregaCenario('dani');
+    } else {
+        carregaCenario('rafael');
+    }
+}
+
+function iniciarProtetorDeTela() {
+    PROTETOR_DE_TELA = setInterval(sorteiaCenario, INTERVALO_PROTETOR);
+}
+
+function pararProtetorDeTela() {
+    clearInterval(PROTETOR_DE_TELA);
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
