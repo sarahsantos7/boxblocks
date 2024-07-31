@@ -5,27 +5,31 @@ var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
 var PROTETOR_DE_TELA = null;
 var BLOCOS = [];
-var NOME_BLOCOS = [
-    'A_agua',
-    'C_chao',
-    'F_folha',
-    'G_grama',
-    'L_planta',
-    'M_madeira',
-    'O_ouro',
-    'P_pedra',
-    'R_rubi',
-    'X_so_terra',
-    'T_terra',
-    'V_lava',
-    'D_diamante',
-    'I_vidro',
-    'N_chao',
-    'E_neve',
-    'E_neve',
-    'K_gelo',
-    'B_tocha',
+
+var NOME_CONSTRUCOES = [
+    {'A': 'agua'},
+    {'C': 'chao2'},
+    {'N': 'chao1'},
+    {'F': 'folha'},
+    {'G': 'grama'},
+    {'L': 'planta'},
+    {'M': 'madeira'},
+    {'O': 'ouro'},
+    {'P': 'pedra'},
+    {'R': 'rubi'},
+    {'X': 'so_terra'},
+    {'T': 'terra'},
+    {'V': 'lava'},
+    {'D': 'diamante'},
+    {'E': 'neve'},
+    {'K': 'gelo'},
+    {'B': 'tocha'},
 ];
+
+var NOME_JOGADORES = [
+    {'^': 'luffy_a'},
+    {'#': 'luffy_b'},
+]
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -63,12 +67,18 @@ function log(texto){
 function carregaBlocos() {
     var promises = []
 
-    NOME_BLOCOS.forEach(bloco => {
-        promises.push(carregaBloco(bloco));
+    NOME_CONSTRUCOES.forEach(item => {
+        promises.push(carregaBloco('construcoes', item));
     });
 
-    NOME_LETRAS.forEach(bloco => {
-        promises.push(carregaBloco('letras/' + bloco));
+    NOME_JOGADORES.forEach(item => {
+        promises.push(carregaBloco('jogadores', item));
+    });
+
+    NOME_LETRAS.forEach(item => {
+        var itemObj = {}
+        itemObj[item] = item
+        promises.push(carregaBloco('letras', itemObj));
     });
 
     Promise.all(promises).then(promise => {
@@ -77,16 +87,14 @@ function carregaBlocos() {
     });
 }
 
-function carregaBloco(nome) {
-    var promise = fetch('blocos/' + nome +'.txt');
+function carregaBloco(pasta, item) {
+    var codigo = Object.keys(item)[0];
+    var arquivo = Object.values(item)[0]
+
+    var url = 'blocos/' + pasta + "/" + arquivo +'.txt';
+    var promise = fetch(url);
 
     promise.then(response => response.text()).then(bloco => {
-        var codigo
-         if (nome.indexOf("_") > 0) {
-            codigo = nome.split("_")[0];
-         } else {
-            codigo = nome.replace("letras/", "");
-         }
         log('Bloco ' + codigo + ' carregado.');
         BLOCOS[codigo] = bloco;
     })
