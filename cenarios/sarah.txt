@@ -1,11 +1,11 @@
-                      II
-               F      II
-              FFF     II
-             FFFFF    II             E
-            FFFFFFF   II            EFE
-  L  L         M      II            FFF
-CCCCCCCCL      M      II            FFF
-CCCCCCCCC      M      II     L  LL   M   L
+
+               F
+              FFF
+             FFFFF                   E
+            FFFFFFF                 EFE
+  L  L         M                    FFF
+CCCCCCCCL      M                    FFF
+CCCCCCCCC      M             L  LL   M   L
 XXXXXXXXXCCCCCCCCCAAAAAKKKKNNNNNNNNNNNNNNNNNNNNNNNN
 XXXXXXXXXXXXXXXXXXXAAAAKKKXXXXXXXXXXXXXXXXXXXXXXXXX
 PPPPPPPPPPPPPPOPPPPPAAAKKPPPPPPPPPORPPPPPPPPPRPPPPP
