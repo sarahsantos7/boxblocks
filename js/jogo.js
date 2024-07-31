@@ -24,6 +24,7 @@ var NOME_BLOCOS = [
     'E_neve',
     'E_neve',
     'K_gelo',
+    'B_tocha',
 ];
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -51,8 +52,8 @@ var CORES = {
     'D': '#07D0FF',
     'I': '#FFFFFF',
     'K': '#56B2FF',
-    'K': '#56B2FF',
     'k': '#B9DFFF',
+    'b': '#F60600',
 };
 
 function log(texto){
