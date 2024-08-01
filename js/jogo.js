@@ -222,8 +222,21 @@ function pararProtetorDeTela() {
     clearInterval(PROTETOR_DE_TELA);
 }
 
+function desenhaCores(){
+    var divCores = document.getElementById("cores")
+    var size = 40
+    var html = ""
+
+    Object.keys(CORES).forEach(cor => {
+        html += "<div style='text-align: center; height: " + size + "px; width: " + size + "px; background-color: " + CORES[cor]  + "'> " + cor + "&nbsp;</div>"
+    });
+
+    divCores.innerHTML = html
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
-    carregaBlocos();
+    desenhaCores()
+    carregaBlocos()
 });
 
 
