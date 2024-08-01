@@ -22,7 +22,8 @@ var NOME_CONSTRUCOES = [
     {'R': 'rubi'},
     {'X': 'so_terra'},
     {'T': 'terra'},
-    {'V': 'lava'},
+    {'V1': 'lava1'},
+    {'V2': 'lava2'},
     {'D': 'diamante'},
     {'E': 'neve'},
     {'K': 'gelo'},
@@ -41,7 +42,7 @@ var NOME_JOGADORES = [
     {'%': 'nico_robin_c'},
 ]
 
-var SPRITES = ['^', '#']
+var SPRITES = ['^', '#', 'V']
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
