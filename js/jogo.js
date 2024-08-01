@@ -30,6 +30,9 @@ var NOME_JOGADORES = [
     {'^': 'luffy_a'},
     {'#': 'luffy_b'},
     {'*': 'tony'},
+    {'&': 'nico_robin_a'},
+    {'$': 'nico_robin_b'},
+    {'%': 'nico_robin_c'},
 ]
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -60,7 +63,6 @@ var CORES = {
     'k': '#B9DFFF',
     'b': '#F60600',
     'B': '#FFEAA9',
-    'r': '#FF92A9',
 };
 
 function log(texto){
