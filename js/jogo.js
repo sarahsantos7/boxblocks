@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'tela1';
+var CENARIO_INICIAL = 'dani';
 var INTERVALO_PROTETOR = 1200;
 var INTERVALO_REFRESH = 300;
 var TAMANHO_BLOCO = 5;
@@ -47,30 +47,30 @@ var SPRITES = ['^', '#', 'V']
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var CORES = {
-    '█': '#000000',
+    'R': '#A00000',
+    'b': '#F60600',
+    'V': '#FF1300',
+    'v': '#FF6A00',
+    'O': '#FFCA00',
     'G': '#7CFC00',
     'g': '#00C02A',
+    'L': '#25D400',
+    'l': '#1CA300',
+    'f': '#3F7500',
+    'F': '#234200',
+    'A': '#250092',
+    'a': '#2E00B7',
+    'K': '#56B2FF',
+    'D': '#07D0FF',
+    'k': '#B9DFFF',
+    'I': '#FFFFFF',
+    '█': '#000000',
     'N': '#8B5A2B',
     'P': '#504F54',
     'p': '#777777',
-    'O': '#FFCA00',
     'M': '#462912',
     'm': '#825326',
-    'F': '#234200',
-    'f': '#3F7500',
-    'R': '#A00000',
-    'L': '#25D400',
-    'l': '#1CA300',
     't': '#8B5A2B',
-    'A': '#250092',
-    'a': '#2E00B7',
-    'V': '#FF1300',
-    'v': '#FF6A00',
-    'D': '#07D0FF',
-    'I': '#FFFFFF',
-    'K': '#56B2FF',
-    'k': '#B9DFFF',
-    'b': '#F60600',
     'B': '#FFEAA9',
 };
 
@@ -228,7 +228,7 @@ function desenhaCores(){
     var html = ""
 
     Object.keys(CORES).forEach(cor => {
-        html += "<div style='text-align: center; height: " + size + "px; width: " + size + "px; background-color: " + CORES[cor]  + "'> " + cor + "&nbsp;</div>"
+        html += "<div style='display: inline-block; text-align: center; height: " + size + "px; width: " + size + "px; background-color: " + CORES[cor]  + "'> " + cor + "&nbsp;</div>"
     });
 
     divCores.innerHTML = html
