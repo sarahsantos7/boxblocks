@@ -1,10 +1,13 @@
 var CENARIO_INICIAL = 'tela1';
 var INTERVALO_PROTETOR = 1200;
+var INTERVALO_REFRESH = 300;
 var TAMANHO_BLOCO = 5;
 var TAMANHO_PIXEL = 4;
 var CONTEXT = null;
+var TIMER_REFRESH = null;
 var PROTETOR_DE_TELA = null;
 var BLOCOS = [];
+var SPRITE_ATUAL = 1;
 
 var NOME_CONSTRUCOES = [
     {'A': 'agua'},
@@ -27,14 +30,18 @@ var NOME_CONSTRUCOES = [
 ];
 
 var NOME_JOGADORES = [
-    {'^': 'luffy_a'},
-    {'#': 'luffy_b'},
+    {'^1': 'luffy_a1'},
+    {'^2': 'luffy_a2'},
+    {'#1': 'luffy_b1'},
+    {'#2': 'luffy_b2'},
     {'*': 'tony'},
     {'+': 'tony2'},
     {'&': 'nico_robin_a'},
     {'$': 'nico_robin_b'},
     {'%': 'nico_robin_c'},
 ]
+
+var SPRITES = ['^', '#']
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -94,7 +101,7 @@ function carregaBlocos() {
 }
 
 function carregaBloco(pasta, item) {
-    var codigo = Object.keys(item)[0];
+    var codigo = Object.keys(item)[0]
     var arquivo = Object.values(item)[0]
 
     var url = 'blocos/' + pasta + "/" + arquivo +'.txt';
@@ -120,30 +127,41 @@ function comecaJogo() {
 }
 
 function carregaCenario(cenario) {
+    if (TIMER_REFRESH) {
+        clearInterval(TIMER_REFRESH)
+    }
+
     CONTEXT.clearRect(0, 0, 1000, 1000)
     fetch('cenarios/' + cenario + '.txt').then(response => {
         return response.text();
       }).then(cenario => {
-
-        var linhas = cenario.split("\n")
-        log("Carregando cenario com " + linhas.length + " linhas")
-        var l = 0
-        linhas.forEach(linha => {
-            log("Carregando linha " + l)
-            carregaLinha(linha, l)
-            l++
-        });
-
+        TIMER_REFRESH = setInterval(() => { refresh(cenario) }, INTERVALO_REFRESH)
       })
+}
+
+function refresh(cenario) {
+    if (SPRITE_ATUAL == 1) {
+        SPRITE_ATUAL = 2
+    } else {
+        SPRITE_ATUAL = 1
+    }
+    var linhas = cenario.split("\n")
+    var l = 0
+    linhas.forEach(linha => {
+        carregaLinha(linha, l)
+        l++
+    });
 }
 
 function carregaLinha(linha, l) {
     for (var c = 0; c < linha.length; c++) {
         var bloco = linha[c]
         if (bloco != ' ') {
+            if (SPRITES.includes(bloco)) {
+                bloco = bloco + SPRITE_ATUAL
+            }
             var blocoAchado = BLOCOS[bloco];
             if (blocoAchado) {
-                log("linha " + l)
                 desenhaBloco(blocoAchado, c, l);
             } else {
                 log("Não consegui encontrar o bloco " + bloco + ". Linha: " + linha + ". Coluna: " + c);
