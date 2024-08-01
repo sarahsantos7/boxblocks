@@ -30,10 +30,10 @@ var NOME_CONSTRUCOES = [
 ];
 
 var NOME_JOGADORES = [
-    {'^1': 'luffy_a1'},
-    {'^2': 'luffy_a2'},
-    {'#1': 'luffy_b1'},
-    {'#2': 'luffy_b2'},
+    {'^1': 'luffy_cima1'},
+    {'^2': 'luffy_cima2'},
+    {'#1': 'luffy_baixo1'},
+    {'#2': 'luffy_baixo2'},
     {'*': 'tony'},
     {'+': 'tony2'},
     {'&': 'nico_robin_a'},
@@ -135,11 +135,13 @@ function carregaCenario(cenario) {
     fetch('cenarios/' + cenario + '.txt').then(response => {
         return response.text();
       }).then(cenario => {
+        refresh(cenario)
         TIMER_REFRESH = setInterval(() => { refresh(cenario) }, INTERVALO_REFRESH)
       })
 }
 
 function refresh(cenario) {
+    CONTEXT.clearRect(0, 0, 1000, 1000)
     if (SPRITE_ATUAL == 1) {
         SPRITE_ATUAL = 2
     } else {
