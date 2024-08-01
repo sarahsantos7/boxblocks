@@ -30,6 +30,7 @@ var NOME_JOGADORES = [
     {'^': 'luffy_a'},
     {'#': 'luffy_b'},
     {'*': 'tony'},
+    {'+': 'tony2'},
     {'&': 'nico_robin_a'},
     {'$': 'nico_robin_b'},
     {'%': 'nico_robin_c'},
