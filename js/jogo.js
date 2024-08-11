@@ -1,4 +1,4 @@
-var CENARIO_INICIAL = 'rafael';
+var CENARIO_INICIAL = 'sarah';
 var INTERVALO_PROTETOR = 1200;
 var INTERVALO_REFRESH = 300;
 var TAMANHO_BLOCO = 9;
@@ -8,10 +8,13 @@ var TIMER_REFRESH = null;
 var PROTETOR_DE_TELA = null;
 var BLOCOS = [];
 var SPRITE_ATUAL = 1;
+var NUMERO_DE_SPRITES = 4;
 
 var NOME_CONSTRUCOES = [
     {'A1': 'agua1'},
     {'A2': 'agua2'},
+    {'A3': 'agua1'},
+    {'A4': 'agua2'},
     {'C': 'chao2'},
     {'N': 'chao1'},
     {'F': 'folha'},
@@ -24,7 +27,9 @@ var NOME_CONSTRUCOES = [
     {'X': 'so_terra'},
     {'T': 'terra'},
     {'V1': 'lava1'},
-    {'V2': 'lava2'},
+    {'V2': 'lava1'},
+    {'V3': 'lava2'},
+    {'V4': 'lava2'},
     {'D': 'diamante'},
     {'E': 'neve'},
     {'K': 'gelo'},
@@ -33,17 +38,24 @@ var NOME_CONSTRUCOES = [
 
 var NOME_JOGADORES = [
     {'^1': 'luffy_cima1'},
-    {'^2': 'luffy_cima2'},
+    {'^2': 'luffy_cima1'},
+    {'^3': 'luffy_cima1'},
+    {'^4': 'luffy_cima2'},
     {'#1': 'luffy_baixo1'},
-    {'#2': 'luffy_baixo2'},
+    {'#2': 'luffy_baixo1'},
+    {'#3': 'luffy_baixo1'},
+    {'#4': 'luffy_baixo2'},
     {'*': 'tony'},
     {'+': 'tony2'},
-    {'&': 'nico_robin_a'},
-    {'$': 'nico_robin_b'},
-    {'%': 'nico_robin_c'},
+    {'&': 'robin_cima'},
+    {'$': 'robin_baixo'},
+    {'%1': 'robin_mão1'},
+    {'%2': 'robin_mão2'},
+    {'%3': 'robin_mão3'},
+    {'%4': 'robin_mão4'},
 ]
 
-var SPRITES = ['^', '#', 'V', 'A']
+var SPRITES = ['^', '#', 'V', 'A','%']
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -73,6 +85,7 @@ var CORES = {
     'm': '#825326',
     't': '#8B5A2B',
     'B': '#FFEAA9',
+    'X': '#4C0F54',
 };
 
 function log(texto){
@@ -144,11 +157,11 @@ function carregaCenario(cenario) {
 
 function refresh(cenario) {
     CONTEXT.clearRect(0, 0, 1000, 1000)
-    if (SPRITE_ATUAL == 1) {
-        SPRITE_ATUAL = 2
-    } else {
+    SPRITE_ATUAL++;
+    if (SPRITE_ATUAL > NUMERO_DE_SPRITES) {
         SPRITE_ATUAL = 1
     }
+
     var linhas = cenario.split("\n")
     var l = 0
     linhas.forEach(linha => {
