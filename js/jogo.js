@@ -32,10 +32,10 @@ var NOME_CONSTRUCOES = [
 ];
 
 var NOME_JOGADORES = [
-    {'^': 'luffy_cima1'},
-    //{'^2': 'luffy_cima2'},
-    {'#': 'luffy_baixo1'},
-    //{'#2': 'luffy_baixo2'},
+    {'^1': 'luffy_cima1'},
+    {'^2': 'luffy_cima2'},
+    {'#1': 'luffy_baixo1'},
+    {'#2': 'luffy_baixo2'},
     {'*': 'tony'},
     {'+': 'tony2'},
     {'&': 'nico_robin_a'},
@@ -43,8 +43,7 @@ var NOME_JOGADORES = [
     {'%': 'nico_robin_c'},
 ]
 
-//var SPRITES = ['^', '#', 'V', 'A']
-var SPRITES = ['V', 'A']
+var SPRITES = ['^', '#', 'V', 'A']
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 

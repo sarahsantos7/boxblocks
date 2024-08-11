@@ -5,5 +5,5 @@ OOOOOOOOO
   ██BBB
   █BBBB
   █BBBB
-  RRRRR
-  RBBRR
+  RRRR 
+  RBBR
