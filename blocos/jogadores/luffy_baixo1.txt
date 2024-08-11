@@ -1,5 +1,9 @@
- BRR
- Baa
- aaa
- BBB
- MMM
+  RBBRR
+  RBBRR
+  aBBaa
+  aBBaa
+  aaaaa
+  BBBBB
+  BBBBB
+  BBBBB
+  MMMMM

@@ -1,5 +1,9 @@
- OOO
- RRR
-OOOOO
- BBB
- RRR
+   OOO
+  OOOOO
+  RRRRR
+OOOOOOOOO
+  ██BBB
+  █BBBB
+  █BBBB
+  RRRRR
+  RBBRR
