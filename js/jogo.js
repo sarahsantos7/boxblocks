@@ -10,7 +10,8 @@ var BLOCOS = [];
 var SPRITE_ATUAL = 1;
 
 var NOME_CONSTRUCOES = [
-    {'A': 'agua'},
+    {'A1': 'agua1'},
+    {'A2': 'agua2'},
     {'C': 'chao2'},
     {'N': 'chao1'},
     {'F': 'folha'},
@@ -42,7 +43,7 @@ var NOME_JOGADORES = [
     {'%': 'nico_robin_c'},
 ]
 
-var SPRITES = ['^', '#', 'V']
+var SPRITES = ['^', '#', 'V', 'A']
 
 var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
