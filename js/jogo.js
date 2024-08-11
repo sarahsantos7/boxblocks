@@ -7,7 +7,7 @@ var CONTEXT = null;
 var TIMER_REFRESH = null;
 var PROTETOR_DE_TELA = null;
 var BLOCOS = [];
-var SPRITE_ATUAL = 1;
+var SPRITE_ATUAL = 0;
 var NUMERO_DE_SPRITES = 4;
 
 var NOME_CONSTRUCOES = [
@@ -49,10 +49,10 @@ var NOME_JOGADORES = [
     {'+': 'tony2'},
     {'&': 'robin_cima'},
     {'$': 'robin_baixo'},
-    {'%1': 'robin_mão1'},
-    {'%2': 'robin_mão2'},
-    {'%3': 'robin_mão3'},
-    {'%4': 'robin_mão4'},
+    {'%1': 'robin_mao1'},
+    {'%2': 'robin_mao2'},
+    {'%3': 'robin_mao3'},
+    {'%4': 'robin_mao4'},
 ]
 
 var SPRITES = ['^', '#', 'V', 'A','%']
