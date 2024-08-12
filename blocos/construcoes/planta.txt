@@ -1,5 +1,9 @@
- L
-l    l
-  L L
-   l
-  L
+
+l   L
+L  L   l
+ l  l   L
+L   LL  L
+  l  l  l
+ l  L  L
+L  l   L
+LllLlLLl
