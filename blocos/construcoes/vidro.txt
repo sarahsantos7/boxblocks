@@ -1,5 +1,9 @@
-IIIII
-II  I
-I I I
-I  II
-IIIII
+IIIIIIIII
+I       I
+I   I   I
+I    I  I
+I       I
+I  I    I
+I   I   I
+I       I
+IIIIIIIII

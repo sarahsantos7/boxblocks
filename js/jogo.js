@@ -34,6 +34,7 @@ var NOME_CONSTRUCOES = [
     {'E': 'neve'},
     {'K': 'gelo'},
     {'B': 'tocha'},
+    {'Z': 'vidro'},
 ];
 
 var NOME_JOGADORES = [

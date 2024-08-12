@@ -1,7 +1,7 @@
 
                F
               FFF
-             FFFFF                   E
+             FFFFF       Z           E
             FFFFFFF                 EFE
   L  L         M                    FFF
 CCCCCCCCL      M &                  FFF
