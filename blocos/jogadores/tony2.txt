@@ -1,5 +1,9 @@
 
 
-A█RRRR
-ARRRRR
-  N N
+
+
+
+   RRR
+   RRR
+   NNN
+   mmm
