@@ -6,7 +6,6 @@ import CORES from './nomes/cores.js';
 import SPRITES from './nomes/sprites.js';
 import {
     CENARIO_INICIAL,
-    INTERVALO_PROTETOR,
     INTERVALO_REFRESH,
     TAMANHO_BLOCO,
     TAMANHO_PIXEL,
@@ -15,7 +14,6 @@ import {
 
 let CONTEXT = null;
 let TIMER_REFRESH = null;
-let PROTETOR_DE_TELA = null;
 let BLOCOS = [];
 let SPRITE_ATUAL = 0;
 
@@ -153,14 +151,6 @@ function sorteiaCenario() {
     } else {
         carregaCenario('rafael');
     }
-}
-
-function iniciarProtetorDeTela() {
-    PROTETOR_DE_TELA = setInterval(sorteiaCenario, INTERVALO_PROTETOR);
-}
-
-function pararProtetorDeTela() {
-    clearInterval(PROTETOR_DE_TELA);
 }
 
 function desenhaCores(){
