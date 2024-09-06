@@ -1,3 +1,5 @@
+import { log } from './ferramentas.js';
+
 var CENARIO_INICIAL = 'dani';
 var INTERVALO_PROTETOR = 1200;
 var INTERVALO_REFRESH = 300;
@@ -88,10 +90,6 @@ var CORES = {
     'B': '#FFEAA9',
     'X': '#4C0F54',
 };
-
-function log(texto){
-    console.log(texto);
-}
 
 function carregaBlocos() {
     var promises = []
@@ -256,4 +254,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-
+alert(2)
