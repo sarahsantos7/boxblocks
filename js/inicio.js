@@ -1,13 +1,11 @@
 // funcoes
-import { log, log2 } from './ferramentas.js';
+import { log, log2, log3 } from './ferramentas.js';
 
 // classes
 import Editor from './classes/Editor.js'
+import Carregador from './classes/Carregador.js'
 
 // constantes
-import NOME_CONSTRUCOES from './nomes/construcoes.js';
-import NOME_JOGADORES from './nomes/jogadores.js';
-import NOME_LETRAS from './nomes/letras.js';
 import CORES from './nomes/cores.js';
 import SPRITES from './nomes/sprites.js';
 import {
@@ -23,44 +21,6 @@ let CONTEXT = null;
 let TIMER_REFRESH = null;
 let BLOCOS = [];
 let SPRITE_ATUAL = 0;
-
-function carregaBlocos() {
-    var promises = []
-
-    NOME_CONSTRUCOES.forEach(item => {
-        promises.push(carregaBloco('construcoes', item));
-    });
-
-    NOME_JOGADORES.forEach(item => {
-        promises.push(carregaBloco('jogadores', item));
-    });
-
-    NOME_LETRAS.forEach(item => {
-        var itemObj = {}
-        itemObj[item] = item
-        promises.push(carregaBloco('letras', itemObj));
-    });
-
-    Promise.all(promises).then(promise => {
-        log("Todas as promises foram resolvidas");
-        comecaJogo();
-    });
-}
-
-function carregaBloco(pasta, item) {
-    var codigo = Object.keys(item)[0]
-    var arquivo = Object.values(item)[0]
-
-    var url = 'blocos/' + pasta + "/" + arquivo +'.txt';
-    var promise = fetch(url);
-
-    promise.then(response => response.text()).then(bloco => {
-        log('Bloco ' + codigo + ' carregado.');
-        BLOCOS[codigo] = bloco;
-    })
-
-    return promise;
-}
 
 function achaContext() {
     log('Encontrando context...');
@@ -160,11 +120,13 @@ function sorteiaCenario() {
     }
 }
 
-function iniciar(){
-    Editor.desenhaCores()
-    carregaBlocos()
+async function iniciar(){
+    new Editor().desenhaCores()
+    let carregador = new Carregador()
+    await carregador.carregaBlocos()
+    BLOCOS = carregador.blocos
+    comecaJogo()
 }
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
     iniciar();

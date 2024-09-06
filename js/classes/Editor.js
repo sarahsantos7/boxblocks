@@ -3,7 +3,7 @@ import CORES from '../nomes/cores.js';
 
 class Editor {
 
-    static desenhaCores() {
+    desenhaCores() {
         const divCores = document.getElementById("cores")
         const size = 40
 
