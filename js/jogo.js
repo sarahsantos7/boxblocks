@@ -1,10 +1,12 @@
-import { log } from './ferramentas.js';
+import { log, log2 } from './ferramentas.js';
+import {
+    CENARIO_INICIAL,
+    INTERVALO_PROTETOR,
+    INTERVALO_REFRESH,
+    TAMANHO_BLOCO,
+    TAMANHO_PIXEL
+} from './configuracoes.js';
 
-var CENARIO_INICIAL = 'dani';
-var INTERVALO_PROTETOR = 1200;
-var INTERVALO_REFRESH = 300;
-var TAMANHO_BLOCO = 9;
-var TAMANHO_PIXEL = 3;
 var CONTEXT = null;
 var TIMER_REFRESH = null;
 var PROTETOR_DE_TELA = null;
@@ -252,6 +254,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     carregaBlocos()
 });
 
-
-
-alert(2)
