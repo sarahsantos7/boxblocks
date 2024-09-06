@@ -1,97 +1,23 @@
 import { log, log2 } from './ferramentas.js';
+import NOME_CONSTRUCOES from './nomes/construcoes.js';
+import NOME_JOGADORES from './nomes/jogadores.js';
+import NOME_LETRAS from './nomes/letras.js';
+import CORES from './nomes/cores.js';
+import SPRITES from './nomes/sprites.js';
 import {
     CENARIO_INICIAL,
     INTERVALO_PROTETOR,
     INTERVALO_REFRESH,
     TAMANHO_BLOCO,
-    TAMANHO_PIXEL
+    TAMANHO_PIXEL,
+    NUMERO_DE_SPRITES
 } from './configuracoes.js';
 
-var CONTEXT = null;
-var TIMER_REFRESH = null;
-var PROTETOR_DE_TELA = null;
-var BLOCOS = [];
-var SPRITE_ATUAL = 0;
-var NUMERO_DE_SPRITES = 4;
-
-var NOME_CONSTRUCOES = [
-    {'A1': 'agua1'},
-    {'A2': 'agua2'},
-    {'A3': 'agua1'},
-    {'A4': 'agua2'},
-    {'C': 'chao2'},
-    {'N': 'chao1'},
-    {'F': 'folha'},
-    {'G': 'grama'},
-    {'L': 'planta'},
-    {'M': 'madeira'},
-    {'O': 'ouro'},
-    {'P': 'pedra'},
-    {'R': 'rubi'},
-    {'X': 'so_terra'},
-    {'T': 'terra'},
-    {'V1': 'lava1'},
-    {'V2': 'lava1'},
-    {'V3': 'lava2'},
-    {'V4': 'lava2'},
-    {'D': 'diamante'},
-    {'E': 'neve'},
-    {'K': 'gelo'},
-    {'B': 'tocha'},
-    {'Z': 'vidro'},
-];
-
-var NOME_JOGADORES = [
-    {'^1': 'luffy_cima1'},
-    {'^2': 'luffy_cima1'},
-    {'^3': 'luffy_cima1'},
-    {'^4': 'luffy_cima2'},
-    {'#1': 'luffy_baixo1'},
-    {'#2': 'luffy_baixo1'},
-    {'#3': 'luffy_baixo1'},
-    {'#4': 'luffy_baixo2'},
-    {'*': 'tony'},
-    {'+': 'tony2'},
-    {'&': 'robin_cima'},
-    {'$': 'robin_baixo'},
-    {'%1': 'robin_mao1'},
-    {'%2': 'robin_mao2'},
-    {'%3': 'robin_mao3'},
-    {'%4': 'robin_mao4'},
-]
-
-var SPRITES = ['^', '#', 'V', 'A','%']
-
-var NOME_LETRAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
-var CORES = {
-    'R': '#A00000',
-    'b': '#F60600',
-    'V': '#FF1300',
-    'v': '#FF6A00',
-    'O': '#FFCA00',
-    'G': '#7CFC00',
-    'g': '#00C02A',
-    'L': '#25D400',
-    'l': '#1CA300',
-    'f': '#3F7500',
-    'F': '#234200',
-    'A': '#250092',
-    'a': '#2E00B7',
-    'K': '#56B2FF',
-    'D': '#07D0FF',
-    'k': '#B9DFFF',
-    'I': '#FFFFFF',
-    '█': '#000000',
-    'N': '#8B5A2B',
-    'P': '#504F54',
-    'p': '#777777',
-    'M': '#462912',
-    'm': '#825326',
-    't': '#8B5A2B',
-    'B': '#FFEAA9',
-    'X': '#4C0F54',
-};
+let CONTEXT = null;
+let TIMER_REFRESH = null;
+let PROTETOR_DE_TELA = null;
+let BLOCOS = [];
+let SPRITE_ATUAL = 0;
 
 function carregaBlocos() {
     var promises = []

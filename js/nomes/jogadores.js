@@ -1,0 +1,18 @@
+export default  [
+    {'^1': 'luffy_cima1'},
+    {'^2': 'luffy_cima1'},
+    {'^3': 'luffy_cima1'},
+    {'^4': 'luffy_cima2'},
+    {'#1': 'luffy_baixo1'},
+    {'#2': 'luffy_baixo1'},
+    {'#3': 'luffy_baixo1'},
+    {'#4': 'luffy_baixo2'},
+    {'*': 'tony'},
+    {'+': 'tony2'},
+    {'&': 'robin_cima'},
+    {'$': 'robin_baixo'},
+    {'%1': 'robin_mao1'},
+    {'%2': 'robin_mao2'},
+    {'%3': 'robin_mao3'},
+    {'%4': 'robin_mao4'},
+]
