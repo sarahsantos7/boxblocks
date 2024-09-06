@@ -1,4 +1,10 @@
+// funcoes
 import { log, log2 } from './ferramentas.js';
+
+// classes
+import Editor from './classes/Editor.js'
+
+// constantes
 import NOME_CONSTRUCOES from './nomes/construcoes.js';
 import NOME_JOGADORES from './nomes/jogadores.js';
 import NOME_LETRAS from './nomes/letras.js';
@@ -12,6 +18,7 @@ import {
     NUMERO_DE_SPRITES
 } from './configuracoes.js';
 
+// variaveis
 let CONTEXT = null;
 let TIMER_REFRESH = null;
 let BLOCOS = [];
