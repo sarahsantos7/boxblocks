@@ -160,8 +160,13 @@ function sorteiaCenario() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    Editor.desenhaCores(CORES)
+function iniciar(){
+    Editor.desenhaCores()
     carregaBlocos()
+}
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    iniciar();
 });
 
