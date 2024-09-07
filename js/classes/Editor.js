@@ -1,4 +1,4 @@
-import { log, log2 } from '../ferramentas.js';
+import { log } from '../ferramentas.js';
 import CORES from '../nomes/cores.js';
 
 class Editor {

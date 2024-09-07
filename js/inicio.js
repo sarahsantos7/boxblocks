@@ -1,5 +1,5 @@
 // funcoes
-import { log, log2, log3 } from './ferramentas.js';
+import { log } from './ferramentas.js';
 
 // classes
 import Editor from './classes/Editor.js'

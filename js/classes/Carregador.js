@@ -1,4 +1,4 @@
-import { log, log2, log3 } from '../ferramentas.js';
+import { log } from '../ferramentas.js';
 import NOME_CONSTRUCOES from '../nomes/construcoes.js';
 import NOME_JOGADORES from '../nomes/jogadores.js';
 import NOME_LETRAS from '../nomes/letras.js';
@@ -27,7 +27,7 @@ class Carregador {
         });
 
         return Promise.all(promises).then(promise => {
-            log3("Todas as promises foram resolvidas");
+            log("Todas as promises foram resolvidas");
         });
     }
 
