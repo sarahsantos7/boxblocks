@@ -9,7 +9,7 @@ class Carregador {
         this.blocos = []
     }
 
-    carregaBlocos() {
+    async carregaBlocos() {
         let promises = []
 
         NOME_CONSTRUCOES.forEach(item => {
@@ -26,9 +26,11 @@ class Carregador {
             promises.push(this.carregaBloco('letras', itemObj));
         });
 
-        return Promise.all(promises).then(promise => {
+        await Promise.all(promises).then(promise => {
             log("Todas as promises foram resolvidas");
         });
+
+        return this.blocos;
     }
 
     carregaBloco(pasta, item){

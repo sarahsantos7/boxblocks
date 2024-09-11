@@ -123,8 +123,7 @@ function sorteiaCenario() {
 async function iniciar(){
     new Editor().desenhaCores()
     let carregador = new Carregador()
-    await carregador.carregaBlocos()
-    BLOCOS = carregador.blocos
+    BLOCOS = await carregador.carregaBlocos()
     comecaJogo()
 }
 
