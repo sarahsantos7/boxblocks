@@ -25,4 +25,6 @@ export default {
     't': '#8B5A2B',
     'B': '#FFEAA9',
     'X': '#4C0F54',
+    'y': '#FFBAE5',
+    'Y': '#FF00A0',
 }

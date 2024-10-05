@@ -2,10 +2,10 @@
                F
               FFF
              FFFFF                   E
-            FFFFFFF                 EFE
-  L  L         M                    FFF
-CCCCCCCCL      M &                  FFF ^
-CCCCCCCCCB     M $           L  LL  %M  #  L
+>           FFFFFFF                 EFE
+< L  L         M                    FFF
+CCCCCCCCL    & M                    FFF ^
+CCCCCCCCCB   $ M             L  LL  %M  #  L
 XXXXXXXXXCCCCCCCCCAAAAAKKKKNNNNNNNNNNNNNNNNNNNNNN
 XXXXXXXXXXXXXXXXXXXAAAAKKKXXXXXXXXXXXXXXXXXXXXXXX
 PPPPPPPPPPPPPPOPPPPPAAAKKPPPPPPPPPORPPPPPPPPPRPPP

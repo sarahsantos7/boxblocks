@@ -15,4 +15,8 @@ export default  [
     {'%2': 'robin_mao2'},
     {'%3': 'robin_mao3'},
     {'%4': 'robin_mao4'},
+    {'>': 'sakura_cima'},
+    {'<': 'sakura_baixo'},
+    {'@': 'alvaro_cima1'},
+    {'!': 'alvaro_baixo1'},
 ]
