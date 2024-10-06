@@ -23,4 +23,5 @@ export default [
     {'K': 'gelo'},
     {'B': 'tocha'},
     {'Z': 'vidro'},
+    {'1': 'lux_lux_fruit'},
 ]

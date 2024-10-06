@@ -1,11 +1,11 @@
-
-               F
-              FFF
-             FFFFF                   E
->           FFFFFFF                 EFE
-< L  L         M                    FFF
-CCCCCCCCL    & M                    FFF ^
-CCCCCCCCCB   $ M             L  LL  %M  #  L
+                                         ZZZZZZZZ
+               F                                Z
+              FFF                               Z
+             FFFFF                   E          Z
+>           FFFFFFF                 EFE         Z
+<1L  L         M                    FFF         Z
+CCCCCCCCL    & M                    FFF ^       Z
+CCCCCCCCCB   $ M             L  LL  %M  #  L    Z
 XXXXXXXXXCCCCCCCCCAAAAAKKKKNNNNNNNNNNNNNNNNNNNNNN
 XXXXXXXXXXXXXXXXXXXAAAAKKKXXXXXXXXXXXXXXXXXXXXXXX
 PPPPPPPPPPPPPPOPPPPPAAAKKPPPPPPPPPORPPPPPPPPPRPPP

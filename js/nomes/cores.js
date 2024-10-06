@@ -4,6 +4,7 @@ export default {
     'V': '#FF1300',
     'v': '#FF6A00',
     'O': '#FFCA00',
+    'o': '#FFE76C',
     'G': '#7CFC00',
     'g': '#00C02A',
     'L': '#25D400',
