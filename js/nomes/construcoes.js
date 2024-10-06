@@ -25,4 +25,5 @@ export default [
     {'Z': 'vidro'},
     {'1': 'lux_lux_fruit'},
     {'2': 'in_in_fruit'},
+    {'3': 'all_all_fruit'},
 ]
