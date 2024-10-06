@@ -26,4 +26,5 @@ export default [
     {'1': 'lux_lux_fruit'},
     {'2': 'in_in_fruit'},
     {'3': 'all_all_fruit'},
+    {'4': 'vid_vid_fruit'},
 ]
