@@ -27,4 +27,5 @@ export default [
     {'2': 'in_in_fruit'},
     {'3': 'all_all_fruit'},
     {'4': 'vid_vid_fruit'},
+    {'5': 'mort_mort_fruit'},
 ]
