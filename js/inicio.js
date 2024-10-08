@@ -1,9 +1,10 @@
 // funcoes
-import { log } from './ferramentas.js';
+import { log, getContext, executaQuandoPronto } from './ferramentas.js';
 
 // classes
 import Editor from './classes/Editor.js'
 import Carregador from './classes/Carregador.js'
+import Jogo from './classes/Jogo.js'
 
 // constantes
 import CORES from './nomes/cores.js';
@@ -22,14 +23,9 @@ let TIMER_REFRESH = null;
 let BLOCOS = [];
 let SPRITE_ATUAL = 0;
 
-function achaContext() {
-    log('Encontrando context...');
-    return document.getElementById('canvas').getContext('2d');
-}
-
 function comecaJogo() {
     log('Começando jogo...');
-    CONTEXT = achaContext();
+    CONTEXT = getContext();
     carregaCenario(CENARIO_INICIAL);
 }
 
@@ -107,27 +103,15 @@ function desenhaPixel(cor, x, y) {
     CONTEXT.fillRect(x, y, TAMANHO_PIXEL, TAMANHO_PIXEL);
 }
 
-function sorteiaCenario() {
-    var n = Math.random();
-    if (n > 0.75) {
-        carregaCenario('tela1');
-    } else if (n > 0.50) {
-        carregaCenario('sarah');
-    } else if (n > 0.25) {
-        carregaCenario('dani');
-    } else {
-        carregaCenario('rafael');
-    }
-}
-
-async function iniciar(){
+async function inicia(){
     new Editor().desenhaCores()
     let carregador = new Carregador()
     BLOCOS = await carregador.carregaBlocos()
     comecaJogo()
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    iniciar();
-});
+executaQuandoPronto(() => {
+    inicia();
+})
+
 
